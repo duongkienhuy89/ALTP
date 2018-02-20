@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A6F5211A-2B61-7B25-2FCC-496CA51020FA}</ProjectGuid>
+    <ProjectGuid>{511C3C96-0515-5F51-FAEC-7AFCC63E71F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -193,22 +193,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.35.0">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.35.0.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.35.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.35.0">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.35.0.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.35.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl_v1.2.35.0">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.35.0.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.35.0.dll</HintPath>
  </Reference>
  <Reference Include="tk2dExternal">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
  </Reference>
  <Reference Include="tk2dSkin">
- <HintPath>D:/vtc/ALTP_DUNG/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
+ <HintPath>D:/vtc/ALTP_DUNG/ALTP/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -222,7 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{2E1C310E-DD58-422B-0D1B-06B91CE4A0BA}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{3028F878-CBB7-CED2-83DA-9C8CAE0B5B73}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -27,7 +27,7 @@ public class SoundController : MonoBehaviour
     void Awake()
     {
         PlayBGMusic();
-        DontDestroyOnLoad(this.gameObject);
+
     }
 
     // Update is called once per frame
