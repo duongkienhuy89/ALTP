@@ -94,8 +94,8 @@ public class GameController : MonoBehaviour {
 
     public void doSave()
     {
-        
-        DataController.SaveHightScore(level-1);
+
+        DataController.SaveHightScore(level - 1);
         DataController.SaveHightSecond(dTime);
     }
     

@@ -11,6 +11,7 @@ public class PopupController : MonoBehaviour {
     public PopUpSHA sha;
     public MainGame mainGame;
     public PopUpStopGame stopGame;
+    public MaxScore maxScore;
 
     public float showPositionYMainGame;
 
@@ -25,6 +26,20 @@ public class PopupController : MonoBehaviour {
 
     public float showPositionYNguoiThan;
     public float showPositionYIwin;
+
+
+    public void HidePopupMaxScore()
+    {
+        StartCoroutine(ieMoveUp(maxScore.gameObject));
+
+    }
+
+    public void ShowPopupMaxScore()
+    {
+        maxScore.setData();
+        maxScore.transform.position = new Vector3(maxScore.transform.position.x, showPositionYMainGame, 10f);
+    }
+
 
     public void HidePopupStop()
     {

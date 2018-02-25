@@ -246,7 +246,7 @@ public class DataController
         }
         else
         {
-            return 0;
+            return 112110;
         }
     }
 

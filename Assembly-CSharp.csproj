@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripts\Level\Level.cs" />
      <Compile Include="Assets\Scripts\ObjectPooling\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\PopUp\MainGame.cs" />
+     <Compile Include="Assets\Scripts\PopUp\MaxScore.cs" />
      <Compile Include="Assets\Scripts\PopUp\PopUpGameOver.cs" />
      <Compile Include="Assets\Scripts\PopUp\PopUpKhanGia.cs" />
      <Compile Include="Assets\Scripts\PopUp\PopUpNguoiThan.cs" />

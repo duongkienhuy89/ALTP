@@ -34,7 +34,8 @@ public class MainGame : MonoBehaviour {
     void btnDiemCao_OnClick()
     {
 
-        SceneManager.LoadScene("Rank");
+        PopupController.instance.ShowPopupMaxScore();
+        PopupController.instance.HideMainGame();
       
     }
 
