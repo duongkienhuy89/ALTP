@@ -16,7 +16,8 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
     public tk2dUIItem btnBack;
     public GameObject WYN;
     public tk2dTextMesh txtName;
-    public tk2dTextMesh txtCoin;
+	public tk2dTextMesh txtMyLevel;
+    public tk2dTextMesh txtMyTop;
     public tk2dTextMesh txtLoading;
 
     private string mymac = "";
@@ -54,7 +55,8 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
         WYN.SetActive(false);
         StartCoroutine(WaitForRequest());
         txtName.text = "" + myname;
-        txtCoin.text = "Top:" + mytop;
+	
+		txtMyLevel.text = "Câu: " + myCoin;
        
     }
 
@@ -97,14 +99,14 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
             mytop = int.Parse(tmg.Trim())+1;
             DataController.SaveTop(mytop);
 
-            txtCoin.text = "Top:" + mytop;
+			txtMyTop.text = "Top:" + mytop;
  
 
         }
         else
         {
 
-            txtCoin.text = "Not Connected";
+			txtMyTop.text = "Not Connected";
    
         }
 
