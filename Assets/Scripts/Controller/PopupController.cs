@@ -92,6 +92,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
+        popup.transform.position = new Vector3(popup.gameObject.transform.position.x, hidePostionY, popup.gameObject.transform.position.z);
        
     }
 
