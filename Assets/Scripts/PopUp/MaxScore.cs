@@ -9,6 +9,8 @@ public class MaxScore : MonoBehaviour {
 
     public tk2dUIItem btnXepHang;
     public tk2dUIItem btnHome;
+	public tk2dUIItem btnHoiNgu;
+	public tk2dUIItem btnLichVanNien;
     public tk2dTextMesh txtCau;
 
     BannerView bannerView;
@@ -66,10 +68,21 @@ public class MaxScore : MonoBehaviour {
         HideAdsBanner();
     }
 
+	public void btnHoiNgu_OnClick()
+	{
+		ShareRate.RateHoiNgu ();
+	}
+	public void btnLichVanNien_OnClick()
+	{
+		ShareRate.RateLVN ();
+	}
+
 	// Use this for initialization
 	void Start () {
         btnXepHang.OnClick += btnXepHang_OnClick;
         btnHome.OnClick += btnHome_OnClick;
+		btnHoiNgu.OnClick += btnHoiNgu_OnClick;
+		btnLichVanNien.OnClick += btnLichVanNien_OnClick;
         LoadAdsBanner();
 	}
 	

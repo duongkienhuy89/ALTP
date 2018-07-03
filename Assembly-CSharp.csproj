@@ -89,6 +89,7 @@
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
      <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
      <Compile Include="Assets\Scripts\Configs\Config.cs" />
+     <Compile Include="Assets\Scripts\Configs\ShareRate.cs" />
      <Compile Include="Assets\Scripts\Controller\DapAnController.cs" />
      <Compile Include="Assets\Scripts\Controller\DataController.cs" />
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
