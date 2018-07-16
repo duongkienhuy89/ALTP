@@ -13,6 +13,13 @@ public class GameController : MonoBehaviour {
     public tk2dTextMesh txtDAB;
     public tk2dTextMesh txtDAC;
     public tk2dTextMesh txtDAD;
+
+	string stQuestion = "";
+	string stDAA = "";
+	string stDAB = "";
+	string stDAC = "";
+	string stDAD = "";
+
     public tk2dTextMesh txtTime;
     public tk2dUIItem btnPower;
     public int level = 1;
@@ -322,11 +329,50 @@ public class GameController : MonoBehaviour {
 
         int chon = UnityEngine.Random.Range(0, lstTMG.Count - 1);
 
-        txtQuestion.text = "Câu "+level+": " + lstTMG[chon].Question;
-        txtDAA.text = "A."  +lstTMG[chon].Casea;
-        txtDAB.text = "B." + lstTMG[chon].Caseb;
-        txtDAC.text = "C." + lstTMG[chon].Casec;
-        txtDAD.text = "D." + lstTMG[chon].Cased;
+
+
+		stQuestion="Câu "+level+": " + lstTMG[chon].Question;
+		stDAA="A." +lstTMG[chon].Casea;
+		stDAB="B." +lstTMG[chon].Caseb;
+		stDAC="C." +lstTMG[chon].Casec;
+		stDAD="D." +lstTMG[chon].Cased;
+
+		if (stQuestion.Length > 192) {
+			txtQuestion.scale = new Vector3 (0.4f,0.4f,0.4f);
+		} else {
+			txtQuestion.scale = new Vector3 (0.45f,0.45f,0.45f);
+		}
+
+
+		if (stDAA.Length > 33) {
+			txtDAA.scale = new Vector3 (0.4f,0.4f,0.4f);
+		} else {
+			txtDAA.scale = new Vector3 (0.45f,0.45f,0.45f);
+		}
+
+		if (stDAB.Length > 33) {
+			txtDAB.scale = new Vector3 (0.4f,0.4f,0.4f);
+		} else {
+			txtDAB.scale = new Vector3 (0.45f,0.45f,0.45f);
+		}
+
+		if (stDAC.Length > 33) {
+			txtDAC.scale = new Vector3 (0.4f,0.4f,0.4f);
+		} else {
+			txtDAC.scale = new Vector3 (0.45f,0.45f,0.45f);
+		}
+
+		if (stDAD.Length > 33) {
+			txtDAD.scale = new Vector3 (0.4f,0.4f,0.4f);
+		} else {
+			txtDAD.scale = new Vector3 (0.45f,0.45f,0.45f);
+		}
+
+		txtQuestion.text = stQuestion;
+		txtDAA.text = stDAA;
+		txtDAB.text = stDAB;
+		txtDAC.text = stDAC;
+		txtDAD.text = stDAD;
         truecase = int.Parse(lstTMG[chon].Truecase);
 
         if (level == 1)
