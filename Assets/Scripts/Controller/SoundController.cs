@@ -52,10 +52,7 @@ public class SoundController : MonoBehaviour
         audioSourceBGMusicCreated.loop = true;
         audioSourceBGMusicCreated.Play();
 
-        DontDestroyOnLoad
-        (
-            audioSourceBGMusicCreated
-        );
+      
 
 
     }
