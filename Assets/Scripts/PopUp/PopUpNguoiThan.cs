@@ -144,7 +144,7 @@ public class PopUpNguoiThan : MonoBehaviour {
             }
             else if (chon == 4)
             {
-                txtTraLoi.text =" Đáp án " + dapan+" nhé !";
+				txtTraLoi.text =" Đáp án " + dapan+" nhé. Không chắc chắn lắm đâu !";
             } else if (chon == 5)
             {
                 txtTraLoi.text = "Hình như là đáp án " + dapan;
@@ -154,7 +154,7 @@ public class PopUpNguoiThan : MonoBehaviour {
             }
             else if (chon == 7)
             {
-                txtTraLoi.text = dapan + " nhé !";
+				txtTraLoi.text = dapan + " nhé. Không chắc chắn lắm đâu !";
             }
             else
             {
@@ -186,7 +186,14 @@ public class PopUpNguoiThan : MonoBehaviour {
                 {
                     dapan = "D";
                 }
-                txtTraLoi.text = " Đáp án " + dapan + " là đáp án đúng !";
+
+				if(chonlai%2==0)
+				{
+                   txtTraLoi.text = "Đáp án " + dapan + " là đáp án đúng !";
+				}else
+				{
+					txtTraLoi.text = "Đáp án " + dapan + ". Không chắc chắn lắm đâu !";
+				}
             }
         }
 

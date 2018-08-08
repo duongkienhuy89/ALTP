@@ -51,8 +51,11 @@ public class DapAnController : MonoBehaviour {
         GameController.instance.selectCase = k;
         doSetEnabal(false);
 
-
-        StartCoroutine(WaitTimeDuaRa(4.4f));
+		if (GameController.instance.level <= 5) {
+			StartCoroutine (WaitTimeDuaRa (3.6f));
+		} else {
+			StartCoroutine (WaitTimeDuaRa (4.4f));
+		}
     }
 
     IEnumerator WaitTimeDuaRa(float time)
@@ -73,15 +76,15 @@ public class DapAnController : MonoBehaviour {
         if (GameController.instance.level <= 5)
         {
 
-            StartCoroutine(WaitTimeXuLy(4f));
+            StartCoroutine(WaitTimeXuLy(3f));
         }
         else if (GameController.instance.level > 5 && GameController.instance.level <= 10)
         {
-            StartCoroutine(WaitTimeXuLy(5f));
+            StartCoroutine(WaitTimeXuLy(4f));
         }
         else
         {
-            StartCoroutine(WaitTimeXuLy(7f));
+            StartCoroutine(WaitTimeXuLy(5f));
         }
 
     }
