@@ -53,10 +53,18 @@ public class PopUpNguoiThan : MonoBehaviour {
     }
     void btnContinute_OnClick()
     {
+		try
+		{
         GameController.instance.currentState = GameController.State.Question;
         PopupController.instance.HidePopupNguoiThan();
         DapAnController.instance.doSetEnabal(true);
         resetNguoiThan();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void ketNoi(int k)

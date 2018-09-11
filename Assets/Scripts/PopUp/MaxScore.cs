@@ -57,24 +57,56 @@ public class MaxScore : MonoBehaviour {
 
     public void btnXepHang_OnClick()
     {
+		try
+		{
         HideAdsBanner();
         SceneManager.LoadScene("Rank");
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void btnHome_OnClick()
     {
+		try
+		{
         PopupController.instance.ShowMainGame();
         PopupController.instance.HidePopupMaxScore();
         HideAdsBanner();
+	}
+	catch (System.Exception)
+	{
+
+		throw;
+	}
     }
 
 	public void btnHoiNgu_OnClick()
 	{
+		try
+		{
 		ShareRate.RateHoiNgu ();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnLichVanNien_OnClick()
 	{
+			try
+			{
 		ShareRate.RateLVN ();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	// Use this for initialization

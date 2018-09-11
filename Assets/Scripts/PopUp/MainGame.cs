@@ -10,12 +10,19 @@ public class MainGame : MonoBehaviour {
 
     void btnContinute_OnClick()
     {
-
+		try
+		{
         PopupController.instance.ShowSHA();
         SoundController.Instance.Stop();
         SoundController.Instance.PlayChungTa();
         PopupController.instance.HideMainGame();
         StartCoroutine(WaitTimeSHA(4f));
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     
     }
 
@@ -33,9 +40,16 @@ public class MainGame : MonoBehaviour {
 
     void btnDiemCao_OnClick()
     {
+		try
+		{
+           PopupController.instance.ShowPopupMaxScore();
+           PopupController.instance.HideMainGame();
+	   }
+	  catch (System.Exception)
+	   {
 
-        PopupController.instance.ShowPopupMaxScore();
-        PopupController.instance.HideMainGame();
+		 throw;
+	   }
       
     }
 

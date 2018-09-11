@@ -91,12 +91,20 @@ public class GameController : MonoBehaviour {
 
     void btnPower_OnClick()
     {
+		try
+		{
         if (currentState == State.Question )
         {
            
             currentState = State.PauseGame;
             PopupController.instance.ShowPopupStop(level - 1);
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void doSave()
