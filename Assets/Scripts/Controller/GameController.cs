@@ -30,11 +30,7 @@ public class GameController : MonoBehaviour {
     public int dTime = 60;
     int demframe = 0;
     public tk2dSprite spLaiVanSam;
-
-  
-
-
-    
+	public bool checkVoulumOpen=true;
 
     public enum State
     {

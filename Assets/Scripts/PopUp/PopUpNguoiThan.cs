@@ -140,69 +140,72 @@ public class PopUpNguoiThan : MonoBehaviour {
         }
 
 
-        if (chon >1)
+		if (chon <=1 && GameController.instance.level>5)
         {
-            if (chon == 2)
-            {
-                txtTraLoi.text = "Theo mình thì là đáp án "+dapan;
-            }
-            else if (chon == 3)
-            {
-                txtTraLoi.text = "Theo tôi thì là đáp án " + dapan;
-            }
-            else if (chon == 4)
-            {
-				txtTraLoi.text =" Đáp án " + dapan+" nhé. Không chắc chắn lắm đâu !";
-            } else if (chon == 5)
-            {
-                txtTraLoi.text = "Hình như là đáp án " + dapan;
-            } else if (chon == 6)
-            {
-                txtTraLoi.text ="Có vẻ như là đáp án " + dapan+" nhé !";
-            }
-            else if (chon == 7)
-            {
-				txtTraLoi.text = dapan + " nhé. Không chắc chắn lắm đâu !";
-            }
-            else
-            {
-                txtTraLoi.text = " Đáp án " + dapan + " là đáp án đúng !";
-            }
-        }
-        else
-        {
-            if (chon == 0)
-            {
-                txtTraLoi.text = "Câu hỏi này khó quá mình không biết ! ";
-            }
-            else
-            {
-                int chonlai = Random.Range(1, 5);
-                if (chonlai == 1)
-                {
-                    dapan = "A";
-                }
-                else if (chonlai == 2)
-                {
-                    dapan = "B";
-                }
-                else if (chonlai == 3)
-                {
-                    dapan = "C";
-                }
-                else
-                {
-                    dapan = "D";
-                }
+			if (chon == 0)
+			{
+				txtTraLoi.text = "Câu hỏi này khó quá mình không biết ! ";
+			}
+			else
+			{
+				int chonlai = Random.Range(1, 5);
+				if (chonlai == 1)
+				{
+					dapan = "A";
+				}
+				else if (chonlai == 2)
+				{
+					dapan = "B";
+				}
+				else if (chonlai == 3)
+				{
+					dapan = "C";
+				}
+				else
+				{
+					dapan = "D";
+				}
 
 				if(chonlai%2==0)
 				{
-                   txtTraLoi.text = "Đáp án " + dapan + " là đáp án đúng !";
+					txtTraLoi.text = "Đáp án " + dapan + " là đáp án đúng !";
 				}else
 				{
 					txtTraLoi.text = "Đáp án " + dapan + ". Không chắc chắn lắm đâu !";
 				}
-            }
+			}
+        }
+        else
+        {           
+
+
+			if (chon == 2)
+			{
+				txtTraLoi.text = "Theo mình thì là đáp án "+dapan;
+			}
+			else if (chon == 3)
+			{
+				txtTraLoi.text = "Theo tôi thì là đáp án " + dapan;
+			}
+			else if (chon == 4)
+			{
+				txtTraLoi.text =" Đáp án " + dapan+" nhé. Không chắc chắn lắm đâu !";
+			} else if (chon == 5)
+			{
+				txtTraLoi.text = "Hình như là đáp án " + dapan;
+			} else if (chon == 6)
+			{
+				txtTraLoi.text ="Có vẻ như là đáp án " + dapan+" nhé !";
+			}
+			else if (chon == 7)
+			{
+				txtTraLoi.text = dapan + " nhé. Không chắc chắn lắm đâu !";
+			}
+			else
+			{
+				txtTraLoi.text = " Đáp án " + dapan + " là đáp án đúng !";
+			}
+
         }
 
     }
