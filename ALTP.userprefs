@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PopUp\PopUpNguoiThan.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIAudioManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Controller\SoundController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controller\SoundController.cs" Line="511" Column="45" />
       <File FileName="Assets\Scripts\Controller\GameController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PopUp\MainGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controller\DapAnController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PopUp\PopUpNguoiThan.cs" Line="181" Column="4" />
+      <File FileName="Assets\Scripts\PopUp\PopUpNguoiThan.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PopUp\PopUpKhanGia.cs" Line="1" Column="1" />
+      <File FileName="Assets\TK2DROOT\tk2dUI\Code\Core\tk2dUIAudioManager.cs" Line="67" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
