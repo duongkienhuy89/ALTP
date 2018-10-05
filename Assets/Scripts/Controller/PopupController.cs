@@ -13,6 +13,8 @@ public class PopupController : MonoBehaviour {
     public PopUpStopGame stopGame;
     public MaxScore maxScore;
 
+	public TuVan tuvan;
+
     public float showPositionYMainGame;
 
 
@@ -26,6 +28,19 @@ public class PopupController : MonoBehaviour {
 
     public float showPositionYNguoiThan;
     public float showPositionYIwin;
+
+
+	public void HidePopupTuVan()
+	{
+		StartCoroutine(ieMoveUp(tuvan.gameObject));
+
+	}
+
+	public void ShowPopupTuVan()
+	{
+		tuvan.setData ();
+		tuvan.transform.position = new Vector3(tuvan.transform.position.x, showPositionYMainGame, 10f);
+	}
 
 
     public void HidePopupMaxScore()
@@ -226,6 +241,7 @@ public class PopupController : MonoBehaviour {
         StartCoroutine(ieMoveDown(gameOver.gameObject));
         HidePopupKhanGia();
         HidePopupNguoiThan();
+		HidePopupTuVan();
         nguoithan.resetNguoiThan();
        
     }

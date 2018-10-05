@@ -35,7 +35,13 @@ public class TroGiupControlller : MonoBehaviour {
         btnHoiNguoiThan.gameObject.GetComponent<BoxCollider>().enabled = true;
         btnDoiCauHoi.gameObject.GetComponent<tk2dSprite>().SetSprite("doicauhoi");
         btnDoiCauHoi.gameObject.GetComponent<BoxCollider>().enabled = true;
+		btnDoiCauHoi.gameObject.SetActive (false);
     }
+
+	public void setEnableTuVan ()
+	{
+		btnDoiCauHoi.gameObject.SetActive (true);
+	}
 
     IEnumerator WaitTimeNamMUoi(float time)
     {
@@ -127,10 +133,13 @@ public class TroGiupControlller : MonoBehaviour {
         {
             if (GameController.instance.currentState == GameController.State.Question)
             {
+				GameController.instance.currentState = GameController.State.Help;
                 btnDoiCauHoi.gameObject.GetComponent<tk2dSprite>().SetSprite("doicauhoi2");
                 btnDoiCauHoi.gameObject.GetComponent<BoxCollider>().enabled = false;
-                GameController.instance.currentState = GameController.State.Question;
-                GameController.instance.suget();
+               // GameController.instance.currentState = GameController.State.Question;
+               // GameController.instance.suget();
+				DapAnController.instance.doSetEnabal(false);
+				PopupController.instance.ShowPopupTuVan();
             }
         }
         catch (System.Exception)

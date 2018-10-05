@@ -136,6 +136,10 @@ public class GameController : MonoBehaviour {
     {
         level++;
         StartCoroutine(WaitTimeNextLevel(ss));
+		if(level>=6)
+		{
+			TroGiupControlller.instance.setEnableTuVan ();
+		}
     }
 
     IEnumerator WaitTimeWin(float time)
@@ -301,7 +305,7 @@ public class GameController : MonoBehaviour {
   {
       //do something...............
       yield return new WaitForSeconds(time);
-      SoundController.Instance.Stop();
+     // SoundController.Instance.Stop();
       if (currentState == State.Question)
       {
           
