@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using GoogleMobileAds;
-using GoogleMobileAds.Api;
+
 
 public class PopUpStopGame : MonoBehaviour {
 
@@ -10,37 +9,9 @@ public class PopUpStopGame : MonoBehaviour {
     public tk2dUIItem btnStopGame;
     public tk2dTextMesh txtLevel;
 
-    BannerView bannerView;
-    AdRequest request;
+    
 
 
-    private void LoadAdsBanner()
-    {
-        // Create a 320x50 banner at the top of the screen.
-        bannerView = new BannerView(
-               Config.adsInIDBanner, AdSize.Banner, AdPosition.Top);
-        // Create an empty ad request.
-
-       
-
-        request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).AddTestDevice("54829CBF8D1115A66940C3B0C88A9B7E").Build();
-        // Load the banner with the request.
-
-        //id0ae30a9eb3539410624b3cd2b086379e
-
-        // Debug.Log("device id" + SystemInfo.deviceUniqueIdentifier);
-    }
-
-    public void ShowAdsBanner()
-    {
-        bannerView.LoadAd(request);
-        bannerView.Show();
-    }
-
-    public void HideAdsBanner()
-    {
-        bannerView.Hide();
-    }
  
 
     void callResetDapAn()
@@ -52,7 +23,7 @@ public class PopUpStopGame : MonoBehaviour {
     public void setlevel(int level)
     {
         txtLevel.text = "Vượt qua: Câu " + level;
-        ShowAdsBanner();
+		AdmobControler.Instance.ShowAdsBanner();
     }
 
 
@@ -63,7 +34,7 @@ public class PopUpStopGame : MonoBehaviour {
            //HideOp
             GameController.instance.currentState = GameController.State.Question;
             PopupController.instance.HidePopupStop();
-            HideAdsBanner();
+			AdmobControler.Instance.HideAdsBanner();
         }
         catch (System.Exception)
         {
@@ -87,7 +58,7 @@ public class PopUpStopGame : MonoBehaviour {
             PopupController.instance.ShowMainGame();
             TroGiupControlller.instance.resetHelp();
             GameController.instance.level = 1;
-            HideAdsBanner();
+			AdmobControler.Instance.HideAdsBanner();
             //callResetDapAn();
             //TroGiupControlller.instance.resetHelp();
             //PopupController.instance.HidePopupGameOver();
@@ -108,7 +79,7 @@ public class PopUpStopGame : MonoBehaviour {
     {
         btnContinute.OnClick += btnContinute_OnClick;
         btnStopGame.OnClick += btnStopGame_onClick;
-        LoadAdsBanner();
+		//AdmobControler.RequestBanner();
     }
 	
 	// Update is called once per frame

@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using GoogleMobileAds;
-using GoogleMobileAds.Api;
+
 
 public class MaxScore : MonoBehaviour {
 
@@ -13,42 +12,11 @@ public class MaxScore : MonoBehaviour {
 	public tk2dUIItem btnLichVanNien;
     public tk2dTextMesh txtCau;
 
-    BannerView bannerView;
-    AdRequest request;
-
-
-    private void LoadAdsBanner()
-    {
-        // Create a 320x50 banner at the top of the screen.
-        bannerView = new BannerView(
-               Config.adsInIDBanner, AdSize.Banner, AdPosition.Top);
-        // Create an empty ad request.
-
-
-
-        request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).AddTestDevice("54829CBF8D1115A66940C3B0C88A9B7E").Build();
-        // Load the banner with the request.
-
-        //id0ae30a9eb3539410624b3cd2b086379e
-
-        // Debug.Log("device id" + SystemInfo.deviceUniqueIdentifier);
-    }
-
-    public void ShowAdsBanner()
-    {
-        bannerView.LoadAd(request);
-        bannerView.Show();
-    }
-
-    public void HideAdsBanner()
-    {
-        bannerView.Hide();
-    }
 
 
     public void setData()
     {
-        ShowAdsBanner();
+		AdmobControler.Instance.ShowAdsBanner();
         string cau="Câu "+DataController.GetHightScore();
         txtCau.text = cau;
 
@@ -59,7 +27,7 @@ public class MaxScore : MonoBehaviour {
     {
 		try
 		{
-        HideAdsBanner();
+			AdmobControler.Instance.HideAdsBanner();
         SceneManager.LoadScene("Rank");
 		}
 		catch (System.Exception)
@@ -75,7 +43,7 @@ public class MaxScore : MonoBehaviour {
 		{
         PopupController.instance.ShowMainGame();
         PopupController.instance.HidePopupMaxScore();
-        HideAdsBanner();
+			AdmobControler.Instance.HideAdsBanner();
 	}
 	catch (System.Exception)
 	{
@@ -115,7 +83,7 @@ public class MaxScore : MonoBehaviour {
         btnHome.OnClick += btnHome_OnClick;
 		btnHoiNgu.OnClick += btnHoiNgu_OnClick;
 		btnLichVanNien.OnClick += btnLichVanNien_OnClick;
-        LoadAdsBanner();
+       // LoadAdsBanner();
 	}
 	
 	// Update is called once per frame

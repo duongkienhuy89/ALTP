@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using GoogleMobileAds.Api;
+
 
 public class PopUpGameOver : MonoBehaviour {
 
@@ -8,25 +8,7 @@ public class PopUpGameOver : MonoBehaviour {
 
     public tk2dTextMesh txtLevel;
     public tk2dTextMesh txtMaxLevel;
-    InterstitialAd interstitial;
-
-    private void LoadAdsInterstitial()
-    {
-        // Initialize an InterstitialAd.
-		interstitial = new InterstitialAd(Config.adsInIDGameOver);
-        // Create an empty ad request.
-        AdRequest requestIN = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).AddTestDevice("365BCE5DDF729BFD1E6E40D79CE8F42B").Build();
-        // Load the interstitial with the request.
-        interstitial.LoadAd(requestIN);
-    }
-
-    private void ShowAdsInterstitial()
-    {
-        if (interstitial.IsLoaded())
-        {
-            interstitial.Show();
-        }
-    }
+  
 
     void callResetDapAn()
     {
@@ -38,7 +20,7 @@ public class PopUpGameOver : MonoBehaviour {
     {
         txtLevel.text = "Vượt qua: Câu " + level;
         txtMaxLevel.text = "Thời gian: " + maxlevel+" giây.";
-        LoadAdsInterstitial();
+		AdmobControler.Instance.RequestInterstitial();
     }
 
 
@@ -67,7 +49,7 @@ public class PopUpGameOver : MonoBehaviour {
 
             throw;
         }
-        ShowAdsInterstitial();
+		AdmobControler.Instance.ShowAdsInterstitial();
     }
 
  
