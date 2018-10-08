@@ -488,23 +488,23 @@ public class SoundController : MonoBehaviour
 		}
     }
 
-    public void PlayDuaRa3()
-    {
+	public void PlayHetMoc5()
+	{
 		if (GameController.instance.checkVoulumOpen) {
 			tk2dUIAudioManager.Instance.Play (arrAudioClip [46]);
 			audioSourceBGMusicCreated.Pause ();
 			ok = false;
 		}
-    }
+	}
 
-    public void PlayDuaRa4()
-    {
+	public void PlayHetMoc10()
+	{
 		if (GameController.instance.checkVoulumOpen) {
 			tk2dUIAudioManager.Instance.Play (arrAudioClip [47]);
 			audioSourceBGMusicCreated.Pause ();
 			ok = false;
 		}
-    }
+	}
 
     public void Stop()
     {

@@ -117,20 +117,7 @@ public class GameController : MonoBehaviour {
 
   
 
-    IEnumerator WaitTimeVuot14(float time)
-    {
-        //do something...............
-        yield return new WaitForSeconds(time);
-
-
-        if (level == 14)
-        {
-            SoundController.Instance.PlayVuotQua14();
-            nextgame(7f);
-        }
-     
-
-    }
+ 
 
     void nextgame(float ss)
     {
@@ -156,15 +143,40 @@ public class GameController : MonoBehaviour {
 
     }
 
+	IEnumerator WaitTimeVuot14(float time)
+	{
+		//do something...............
+		yield return new WaitForSeconds(time);
+
+
+		if (level == 14)
+		{
+			SoundController.Instance.PlayVuotQua14();
+			nextgame(7f);
+		}
+
+
+	}
+
     IEnumerator WaitTimeCau10(float time)
     {
         //do something...............
         yield return new WaitForSeconds(time);
 
-        SoundController.Instance.PlayCamXuc();
+		SoundController.Instance.PlayHetMoc10();
         nextgame(7f);
 
     }
+
+	IEnumerator WaitTimeCau5(float time)
+	{
+		//do something...............
+		yield return new WaitForSeconds(time);
+
+		SoundController.Instance.PlayHetMoc5 ();
+		nextgame(13f);
+
+	}
 
   public  void doXuLy()
     {
@@ -202,7 +214,9 @@ public class GameController : MonoBehaviour {
                     SoundController.Instance.PlayDungD();
                 }
 
-                if (level == 14)
+				if (level == 5) {
+					StartCoroutine(WaitTimeCau5(3f));
+				}else if (level == 14)
                 {
                     StartCoroutine(WaitTimeVuot14(3f));
                 }
