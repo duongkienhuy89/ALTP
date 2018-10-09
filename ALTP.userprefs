@@ -7,9 +7,9 @@
       <File FileName="Assets\Scripts\Configs\Config.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controller\AdmobControler.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PopUp\PopUpGameOver.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Controller\GameController.cs" Line="307" Column="42" />
-      <File FileName="Assets\Scripts\Controller\SoundController.cs" Line="503" Column="54" />
-      <File FileName="Assets\Scripts\Controller\TroGiupControlller.cs" Line="41" Column="28" />
+      <File FileName="Assets\Scripts\Controller\GameController.cs" Line="181" Column="15" />
+      <File FileName="Assets\Scripts\Controller\SoundController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controller\TroGiupControlller.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

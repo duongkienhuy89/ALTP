@@ -139,7 +139,8 @@ public class TroGiupControlller : MonoBehaviour {
                // GameController.instance.currentState = GameController.State.Question;
                // GameController.instance.suget();
 				DapAnController.instance.doSetEnabal(false);
-				PopupController.instance.ShowPopupTuVan();
+				SoundController.Instance.PlayHoiToTuVan();
+				StartCoroutine(WaitTimeToTuVan(2f));
             }
         }
         catch (System.Exception)
@@ -149,8 +150,12 @@ public class TroGiupControlller : MonoBehaviour {
         }
     }
 
-
-  
+	IEnumerator WaitTimeToTuVan(float time)
+	{
+		//do something...............
+		yield return new WaitForSeconds (time);
+		PopupController.instance.ShowPopupTuVan();
+	}
 
 	// Use this for initialization
 	void Start () {

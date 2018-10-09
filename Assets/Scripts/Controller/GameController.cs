@@ -123,11 +123,15 @@ public class GameController : MonoBehaviour {
     {
         level++;
         StartCoroutine(WaitTimeNextLevel(ss));
-		if(level>=6)
-		{
-			TroGiupControlller.instance.setEnableTuVan ();
-		}
+
     }
+
+	IEnumerator WaitTimeEnableTuVan(float time)
+	{
+		//do something...............
+		yield return new WaitForSeconds(time);
+		TroGiupControlller.instance.setEnableTuVan ();
+	}
 
     IEnumerator WaitTimeWin(float time)
     {
@@ -173,8 +177,17 @@ public class GameController : MonoBehaviour {
 		//do something...............
 		yield return new WaitForSeconds(time);
 
-		SoundController.Instance.PlayHetMoc5 ();
-		nextgame(13f);
+		if (maxlevel >= 5) {
+			nextgame (2f);
+			TroGiupControlller.instance.setEnableTuVan ();
+		} else {
+			SoundController.Instance.PlayHetMoc5 ();
+			nextgame (13f);
+			if(level>=5)
+			{
+				StartCoroutine(WaitTimeEnableTuVan(12));
+			}
+		}
 
 	}
 
@@ -293,7 +306,7 @@ public class GameController : MonoBehaviour {
 
        DataController.SaveHightScore(tmgb);
        DataController.SaveHightSecond(dTime);
-
+		maxlevel = tmgb;
        PopupController.instance.ShowPopupGameOver(tmgb, 60 - dTime);
     
 
