@@ -5,8 +5,8 @@ using System;
 public class ShareRate
 {
 
-	public static string titleShare = "Ai Là Triệu Phú";
-	public static string LinkShare = "https://play.google.com/store/apps/details?id=ai.la.trieu.phu.altp.tieng";
+	public static string titleShare = "Triệu Phú Mobi";
+	public static string LinkShare = "https://play.google.com/store/apps/details?id=balo.ai.trieuphu";
 	public static string LinkHoiNgu = "https://play.google.com/store/apps/details?id=hoixoay.hoingu.dapxoay";
 	public static string LinkLichVanNien = "https://play.google.com/store/apps/details?id=tana.daithanh.lichvannien";
 

@@ -8,8 +8,8 @@ public class MaxScore : MonoBehaviour {
 
     public tk2dUIItem btnXepHang;
     public tk2dUIItem btnHome;
-	public tk2dUIItem btnHoiNgu;
-	public tk2dUIItem btnLichVanNien;
+	//public tk2dUIItem btnHoiNgu;
+	//public tk2dUIItem btnLichVanNien;
     public tk2dTextMesh txtCau;
 
 
@@ -81,9 +81,9 @@ public class MaxScore : MonoBehaviour {
 	void Start () {
         btnXepHang.OnClick += btnXepHang_OnClick;
         btnHome.OnClick += btnHome_OnClick;
-		btnHoiNgu.OnClick += btnHoiNgu_OnClick;
-		btnLichVanNien.OnClick += btnLichVanNien_OnClick;
-       // LoadAdsBanner();
+		//btnHoiNgu.OnClick += btnHoiNgu_OnClick;
+		//btnLichVanNien.OnClick += btnLichVanNien_OnClick;
+     
 	}
 	
 	// Update is called once per frame
