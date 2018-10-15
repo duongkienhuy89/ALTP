@@ -27,7 +27,7 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
     private int mytop;
     string url = "http://ailatrieuphu.somee.com/Service.asmx/gettop?sha=ai.la.trieu.phu.altp.tiengbuivanban";
     List<AltpUser> lst = new List<AltpUser>();
-
+	private string hedieuhanh = "MA";
 
     #region Singleton
     private static tk2dUIDemo5Controller _instance;
@@ -125,7 +125,7 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
 
         if (mymac.Trim().Equals(""))
         {
-            mymac = "AL" + GetUniqueIdentifier();
+			mymac = hedieuhanh+"" + GetUniqueIdentifier();
             DataController.SaveMac("" + mymac);
         }
 
@@ -248,6 +248,10 @@ public class tk2dUIDemo5Controller : tk2dUIBaseDemoController {
     }
 
 	void Start () {
+
+		#if UNITY_IPHONE
+		hedieuhanh = "MO";
+		#endif
 
         getInfoData();
 	
