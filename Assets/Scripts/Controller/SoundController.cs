@@ -514,6 +514,14 @@ public class SoundController : MonoBehaviour
 			ok = false;
 		}
 	}
+	public void PlayPing()
+	{
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [49]);
+			audioSourceBGMusicCreated.Pause ();
+			ok = false;
+		}
+	}
 
     public void Stop()
     {
