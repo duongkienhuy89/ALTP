@@ -120,7 +120,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
-
+		popup.transform.position = new Vector3(0f, popup.gameObject.transform.position.y, popup.gameObject.transform.position.z);
     }
 
     IEnumerator ieMoveRight(GameObject popup)
@@ -132,6 +132,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
+		popup.transform.position = new Vector3(1500f, popup.gameObject.transform.position.y, popup.gameObject.transform.position.z);
     }
     public void ShowSHA()
     {
@@ -156,6 +157,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
+		popup.transform.position = new Vector3(popup.gameObject.transform.position.x, hidePostionY, popup.gameObject.transform.position.z);
     }
 
     IEnumerator ieMoveDownMain(GameObject popup)
@@ -167,7 +169,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
-
+		popup.transform.position = new Vector3(popup.gameObject.transform.position.x, showPositionYMainGame, popup.gameObject.transform.position.z);
     }
 
     IEnumerator ieMoveUpMain(GameObject popup)
@@ -179,6 +181,7 @@ public class PopupController : MonoBehaviour {
                 * Time.deltaTime;
             yield return 0;
         }
+		popup.transform.position = new Vector3(popup.gameObject.transform.position.x, hidePostionY, popup.gameObject.transform.position.z);
     }
 
     public void ShowMainGame()

@@ -12,9 +12,9 @@ public class Config  {
 
 #if UNITY_ANDROID
 
-	public static string appId = "ca-app-pub-5148482490300491~7632348443";
-	public static string adsInIDGameOver = "ca-app-pub-5148482490300491/9660456424";
-	public static string adsInIDBanner = "ca-app-pub-5148482490300491/5517746020";
+	public static string appId = "ca-app-pub-2127327600096597~2657993406";
+	public static string adsInIDGameOver = "ca-app-pub-2127327600096597/8457114998";
+	public static string adsInIDBanner = "ca-app-pub-2127327600096597/3452200322";
   
 
 

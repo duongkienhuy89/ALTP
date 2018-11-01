@@ -6,7 +6,7 @@ public class ShareRate
 {
 
 	public static string titleShare = "Triệu Phú Mobi";
-	public static string LinkShare = "https://play.google.com/store/apps/details?id=balo.ai.trieuphu";
+	public static string LinkShare = "https://play.google.com/store/apps/details?id=ai.altp.phu";
 	public static string LinkHoiNgu = "https://play.google.com/store/apps/details?id=hoixoay.hoingu.dapxoay";
 	public static string LinkLichVanNien = "https://play.google.com/store/apps/details?id=tana.daithanh.lichvannien";
 
